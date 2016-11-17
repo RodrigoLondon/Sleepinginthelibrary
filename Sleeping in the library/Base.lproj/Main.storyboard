@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainController" id="BYZ-38-t0r" customClass="ViewController" customModule="Sleeping_in_the_library" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleeping in the Library" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIx-Ly-RP9">
+                                <rect key="frame" x="196" y="20" width="208" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="Go6-bT-lsh"/>
+                                    <constraint firstAttribute="height" constant="21" id="VxU-Da-uKK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXO-WK-KA0">
+                                <rect key="frame" x="224" y="508" width="152" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SlZ-FD-XSc"/>
+                                    <constraint firstAttribute="width" constant="152" id="zr2-Sv-dS5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Grab New Image"/>
+                                <connections>
+                                    <action selector="touchRefreshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rdh-C4-PW6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXF-rW-SaR">
+                                <rect key="frame" x="180" y="133" width="240" height="231"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231" id="Jff-5J-bUO"/>
+                                    <constraint firstAttribute="width" constant="240" id="Rp3-LM-XPx"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gXF-rW-SaR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="160" id="43U-IG-nr6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gXF-rW-SaR" secondAttribute="trailing" constant="160" id="6MQ-8P-tKz"/>
+                            <constraint firstItem="AIx-Ly-RP9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6YA-B6-U57"/>
+                            <constraint firstItem="gXF-rW-SaR" firstAttribute="top" secondItem="AIx-Ly-RP9" secondAttribute="bottom" constant="92" id="CXp-Qx-IDA"/>
+                            <constraint firstItem="AIx-Ly-RP9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KzL-d9-Hxr"/>
+                            <constraint firstItem="QXO-WK-KA0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bJL-Ty-yVt"/>
+                            <constraint firstItem="gXF-rW-SaR" firstAttribute="top" secondItem="AIx-Ly-RP9" secondAttribute="bottom" constant="92" id="fze-Ge-wA4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AIx-Ly-RP9" secondAttribute="trailing" constant="176" id="hU3-Q6-0WA"/>
+                            <constraint firstItem="QXO-WK-KA0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="204" id="jbn-TO-sgU"/>
+                            <constraint firstItem="QXO-WK-KA0" firstAttribute="centerX" secondItem="gXF-rW-SaR" secondAttribute="centerX" id="kzd-Im-K8J"/>
+                            <constraint firstItem="gXF-rW-SaR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lSv-kf-tTi"/>
+                            <constraint firstItem="AIx-Ly-RP9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="176" id="mbz-4C-ZXu"/>
+                            <constraint firstItem="AIx-Ly-RP9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="me1-NB-owB"/>
+                            <constraint firstItem="QXO-WK-KA0" firstAttribute="top" secondItem="gXF-rW-SaR" secondAttribute="bottom" constant="144" id="otr-hJ-wgs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QXO-WK-KA0" secondAttribute="bottom" constant="62" id="qUp-aX-QaJ"/>
+                            <constraint firstItem="gXF-rW-SaR" firstAttribute="centerX" secondItem="AIx-Ly-RP9" secondAttribute="centerX" id="qzY-IV-jIb"/>
+                            <constraint firstItem="AIx-Ly-RP9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="x8S-Ey-q6q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QXO-WK-KA0" secondAttribute="trailing" constant="204" id="xHJ-6A-VLd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6YA-B6-U57"/>
+                                <exclude reference="hU3-Q6-0WA"/>
+                                <exclude reference="mbz-4C-ZXu"/>
+                                <exclude reference="me1-NB-owB"/>
+                                <exclude reference="43U-IG-nr6"/>
+                                <exclude reference="6MQ-8P-tKz"/>
+                                <exclude reference="fze-Ge-wA4"/>
+                                <exclude reference="lSv-kf-tTi"/>
+                                <exclude reference="bJL-Ty-yVt"/>
+                                <exclude reference="jbn-TO-sgU"/>
+                                <exclude reference="otr-hJ-wgs"/>
+                                <exclude reference="xHJ-6A-VLd"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="gXF-rW-SaR" id="ARY-eH-JBQ"/>
+                        <outlet property="photoTitle" destination="AIx-Ly-RP9" id="Rsx-Qz-jPp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="337"/>
         </scene>
     </scenes>
 </document>
